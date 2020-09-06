@@ -23,8 +23,8 @@
         height: 80vmin;
         width: 80vmin;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 2vmin;
         justify-items: stretch;
         align-items: stretch;
@@ -38,7 +38,7 @@
         justify-content: center;
         background-color: black;
         color: white;
-        font: 20vmin sans-serif;
+        font: 5vmin sans-serif;
     }
 
     .reset {
@@ -71,7 +71,7 @@
     function setup(parent) {
         let elem;
 
-        for (let i = 0; i < 9; i++) {
+        for (let i = 0; i < 49; i++) {
             elem = document.createElement('div');
             elem.className = 'square';
             elem.addEventListener('click', markSquare(elem));

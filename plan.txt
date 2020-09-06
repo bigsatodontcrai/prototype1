@@ -1,0 +1,9 @@
+1 script for secondary board, the one on left
+
+1 script for the main board for placing pieces
+
+1 script for the main that brings everything together, actually puts them all on one screen
+
+index.html
+
+styles.css
