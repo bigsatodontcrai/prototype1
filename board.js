@@ -6,6 +6,7 @@ function setup(parent, mark) {
         elem.className = 'square';
         elem.addEventListener('click', mark(elem));
         elem.addEventListener('dblclick', destroy(elem));
+        elem.setAttribute('ondragover', 'event.preventDefault()')
         elem.innerText = '';
         parent.append(elem);
     }

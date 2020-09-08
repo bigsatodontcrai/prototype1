@@ -1,16 +1,32 @@
 function startDrag() {
-    heldShip = this;
-    heldShipLength = this.childNodes.length;
+    this.className += ' hold';
+    setTimeout(() => (this.className = 'invisible'), 0);
 }
 
 function dropShip(board, shipname) {
 
-    ship = document.getElementById(shipname);
+    
     return () => {
-        board.appendChild(ship);
+        ship = document.querySelector(shipname);
+        content2.append(ship);
     }
+    
 }
 
 function dragover_handler(ev) {
     ev.preventDefault();
 }
+
+function dragLeave() {
+    this.className = 'empty';
+}
+
+function moveOver(ev) {
+    ev.preventDefault();
+}
+
+function moveEnter(ev){
+    ev.preventDefault();
+    this.className += ' hovered';
+}
+

@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setup(content2, markShip);
     let resetButton = document.querySelector('.reset');
     allShips(content3, 5);
+    
     resetButton.addEventListener('click', () => {
         breakdown(content);
         setup(content, markSquare);

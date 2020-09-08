@@ -6,11 +6,11 @@ function createShip(parent, number) {
     elem.className = 'ship' + number;
     shipName = elem.className;
     elem.addEventListener('dragstart', startDrag);
-    elem.addEventListener('drop', dropShip(parent, shipName));
-    /*elem.addEventListener('dragenter', moveEnter());
-    elem.addEventListener('dragover', moveOver());
-    elem.addEventListener('dragleave', moveLeave());
-    elem.addEventListener('dropend', moveDropEnd());*/
+    elem.addEventListener('drop', dropShip(content2, shipName));
+    elem.addEventListener('dragenter', moveEnter);
+    elem.addEventListener('dragover', moveOver);
+    elem.addEventListener('dragleave', dragLeave);
+    //elem.addEventListener('dropend', moveDropEnd);
     parent.append(elem);
 
 }
