@@ -11,3 +11,5 @@ While much of the game is complete, we still need to add
 3. a streamlined user interface and user experience
 4. sinking ships
 5. setting the ship number
+6. Fully functioning reset that brings back the pieces as well 
+(only clearing the board of hits and misses is complete)
