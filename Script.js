@@ -56,3 +56,19 @@ function markShip(elem) {
         }
     }
 }
+
+function rotate(element) {
+
+}
+
+function gameCheck() {
+
+}
+
+function sinking() {
+
+}
+
+function setShipNumber() {
+    
+}
