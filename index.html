@@ -3,14 +3,44 @@
     <link rel="stylesheet" href="styles.css"></link>
 
     <h1>Battleship</h1>
-
-    <div id="content">
+    <div id="view">
+        <div id="content">
+        </div>
+        <div id="ocean" ondragover="event.preventDefault()" ondrop="dropShip(event)">
+        </div>
+        </div>
+        <div id="base">
+        <div class="ship ship1-container" draggable="true" ondragstart="startDrag(event)">
+            <div id="ship1-0">
+                <span id="circ"></span>
+            </div>
+        </div>
+        <div class="ship ship2-container" draggable="true" ondragstart="startDrag(event)">
+            <div id="ship2-0">
+                <span id="circ"></span>
+            </div>
+            <div id="ship2-1"></div>
+        </div>
+        <div class="ship ship3-container" draggable="true" ondragstart="startDrag(event)">
+            <div id="ship3-0"></div>
+            <div id="ship3-1"></div>
+            <div id="ship3-2"></div>
+        </div>
+        <div class="ship ship4-container" draggable="true" ondragstart="startDrag(event)">
+            <div id="ship4-0"></div>
+            <div id="ship4-1"></div>
+            <div id="ship4-2"></div>
+            <div id="ship4-3"></div>
+        </div>
+        <div class="ship ship5-container" draggable="true" ondragstart="startDrag(event)">
+            <div id="ship5-0"></div>
+            <div id="ship5-1"></div>
+            <div id="ship5-2"></div>
+            <div id="ship5-3"></div>
+            <div id="ship5-4"></div>
+        </div>
     </div>
-    <div id="content2" ondragover="event.preventDefault()">
-    </div>
-
-    <div id="content3">
-    </div>
+    
     <p>
         X to hit, O to miss.
     </p>

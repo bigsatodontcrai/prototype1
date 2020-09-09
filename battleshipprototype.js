@@ -1,16 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
     let content = document.getElementById('content');
-    let content2 = document.getElementById('content2');
-    let content3 = document.getElementById('content3');
+    let ocean = document.getElementById('ocean');
+    let base = document.getElementById('base');
     setup(content, markSquare);
-    setup(content2, markShip);
+    setup(ocean, markShip);
     let resetButton = document.querySelector('.reset');
-    allShips(content3, 5);
     
+    //content2.setAttribute("ondrop","dropShip(event)");
     resetButton.addEventListener('click', () => {
         breakdown(content);
         setup(content, markSquare);
-        breakdown(content2);
-        setup(content2, markShip);
+        breakdown(ocean);
+        setup(ocean, markShip);
     });
 });

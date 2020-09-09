@@ -1,16 +1,16 @@
-function startDrag() {
-    this.className += ' hold';
-    setTimeout(() => (this.className = 'invisible'), 0);
+function startDrag(ev) {
+    ev.dataTransfer.dropEffect = "copy";
+    
+   
 }
 
-function dropShip(board, shipname) {
-
+function dropShip(ev) {
+    ev.preventDefault();
+    alert("wow!");
     
-    return () => {
-        ship = document.querySelector(shipname);
-        content2.append(ship);
-    }
-    
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }
 
 function dragover_handler(ev) {
@@ -18,7 +18,7 @@ function dragover_handler(ev) {
 }
 
 function dragLeave() {
-    this.className = 'empty';
+    
 }
 
 function moveOver(ev) {
@@ -27,6 +27,9 @@ function moveOver(ev) {
 
 function moveEnter(ev){
     ev.preventDefault();
-    this.className += ' hovered';
+    
 }
+
+
+
 

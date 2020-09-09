@@ -1,4 +1,4 @@
-body {
+    body {
         background-color: black;
         display: flex;
         color: white;
@@ -13,7 +13,15 @@ body {
         font: 1.5vmin sans-serif;
         margin: 1vmin 5vmin;
     }
-
+    #view {
+        background-color: black;
+        height: 90vmin;
+        width: 90vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        color: white;
+    }
     #content {
         background-color: white;
         margin: 0.5vmin;
@@ -30,8 +38,9 @@ body {
         align-content: right;
     }
 
-    #content2 {
+    #ocean {
         background-color: white;
+        
         margin: 1vmin;
         height: 40vmin;
         width: 40vmin;
@@ -53,13 +62,13 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: black;
+        background-color: blue;
         color: red;
         font: 3vmin sans-serif;
         
     }
 
-    #content3 {
+    #base {
         background-color: red;
         margin: 0.5vmin;
         height: 30vmin;
@@ -69,39 +78,76 @@ body {
         
     }
 
-    .ship1 {
-        background-color: blue;
-        color: white;
+    .ship1-container {
+        background-color: gray;
+        color: gray;
         height: 4vmin;
         width: 4vmin;
+        display: grid;
+        grid-template-columns: 1fr;
+        
     }
 
-    .ship2 {
+    .ship2-container {
         background-color: yellow;
-        color: white;
+        color: yellow;
         height: 4vmin;
         width: 8vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
     }
 
-    .ship3 {
+    .ship3-container {
         background-color: green;
-        color: white;
+        color: green;
         height: 4vmin;
         width: 12.5vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .ship4 {
+    .ship4-container {
         background-color: purple;
-        color: white;
+        color: purple;
         height: 4vmin;
         width: 17vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    .ship5 {
+    .ship5-container {
         background-color: white;
         color: white;
         height: 4vmin;
         width: 21vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .ship div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font: 3vmin sans-serif;
+        
+    }
+
+    .circle {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .circ {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
     }
 
 
@@ -115,4 +161,22 @@ body {
         bottom: 10px;
         margin: 5vh 0 10vh;
         font: 1.5vmin sans-serif;
+    }
+
+    .hit {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+        
+    }
+
+    .miss {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        
     }
