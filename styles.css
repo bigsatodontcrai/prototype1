@@ -68,6 +68,24 @@
         
     }
 
+    .hitit {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+        
+    }
+
+    .missme {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: gray;
+        border-radius: 50%;
+        display: inline-block;
+        
+    }
+
     #base {
         background-color: red;
         margin: 0.5vmin;
@@ -76,6 +94,14 @@
         
         display: grid;
         
+    }
+
+    #circ {
+        height: 1.5vmin;
+        width: 1.5vmin;
+        background-color: black;
+        border-radius: 60%;
+        display: flex;
     }
 
     .ship1-container {
@@ -87,10 +113,11 @@
         grid-template-columns: 1fr;
         
     }
+    
 
     .ship2-container {
         background-color: yellow;
-        color: yellow;
+        
         height: 4vmin;
         width: 8vmin;
         display: grid;
@@ -100,7 +127,7 @@
 
     .ship3-container {
         background-color: green;
-        color: green;
+        
         height: 4vmin;
         width: 12.5vmin;
         display: grid;
@@ -109,7 +136,7 @@
 
     .ship4-container {
         background-color: purple;
-        color: purple;
+        
         height: 4vmin;
         width: 17vmin;
         display: grid;
@@ -117,32 +144,47 @@
     }
 
     .ship5-container {
-        background-color: white;
-        color: white;
+        background-color: rgb(145, 108, 108);
+        
         height: 4vmin;
         width: 21vmin;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
+    
+
     .ship div {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
         font: 3vmin sans-serif;
         
     }
 
-    .circle {
-        height: 1.5vmin;
-        width: 1.5vmin;
-        background-color: white;
-        border-radius: 50%;
-        display: inline-block;
+    .ship1 {
+        background-color: gray;
     }
 
-    .circ {
+    .ship2 {
+        background-color: yellow;
+    }
+
+    .ship3 {
+        background-color: green;
+    }
+
+    .ship4 {
+        background-color: purple;
+    }
+
+    .ship5 {
+        background-color: rgb(145, 108, 108);
+    }
+
+    
+
+    .circle {
         height: 1.5vmin;
         width: 1.5vmin;
         background-color: white;
@@ -163,20 +205,4 @@
         font: 1.5vmin sans-serif;
     }
 
-    .hit {
-        height: 1.5vmin;
-        width: 1.5vmin;
-        background-color: red;
-        border-radius: 50%;
-        display: inline-block;
-        
-    }
-
-    .miss {
-        height: 1.5vmin;
-        width: 1.5vmin;
-        background-color: white;
-        border-radius: 50%;
-        display: inline-block;
-        
-    }
+    

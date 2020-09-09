@@ -1,39 +1,58 @@
-function markSquare(elem) {
-    //return () => {
-        if (elem.firstChild.className == 'hit') {
-            obj = document.createElement('span');
-            obj.className = 'miss';
-            elem.removeChild(elem.firstChild);
-            let obj;
-            elem.append(obj);
+
+
+function markSquare(element) {
+
+    return () => 
+    {
+        if (element.firstChild.className == 'hitit') {
+            
+            let miss;
+            miss = document.createElement('span');
+            miss.className = 'missme';
+            element.removeChild(element.firstChild);
+            element.append(miss);
+            
         }
         else {
-            alert("!");
-            elem.removeChild(elem.firstChild);
-            let obj;
-            obj = document.createElement('div');
-            obj.className = 'hit';
-            elem.append(obj);
+            let hit;
+            hit = document.createElement('span');
+            hit.className = 'hitit';
+            element.removeChild(element.firstChild);
+            element.append(hit);
+            
         }
-    //}
+    }
+    
+}
+
+function destroy(element) {
+    return () => {
+        element.removeChild(element.firstChild);
+        circ = document.createElement('span');
+        circ.className = 'circle';
+        element.append(circ);
+
+    }
 }
 
 function markShip(elem) {
     return () => {
-        if (elem.firstChild.className == 'hit') {
-            obj = document.createElement('span');
-            obj.className = 'miss';
-            elem.removeChild(elem.firstChild);
-            let obj;
-            elem.append(obj);
+        if (element.firstChild.className == 'hitit') {
+
+            let miss;
+            miss = document.createElement('span');
+            miss.className = 'missme';
+            element.removeChild(element.firstChild);
+            element.append(miss);
+
         }
         else {
-            alert("!");
-            elem.removeChild(elem.firstChild);
-            let obj;
-            obj = document.createElement('div');
-            obj.className = 'hit';
-            elem.append(obj);
+            let hit;
+            hit = document.createElement('span');
+            hit.className = 'hitit';
+            element.removeChild(element.firstChild);
+            element.append(hit);
+
         }
     }
 }
