@@ -1,9 +1,13 @@
-1 script for secondary board, the one on left
+The main functionality of actually placing pieces is now intact
 
-1 script for the main board for placing pieces
+The main difference with this set from the previous playground is the fully functioning grid
 
-1 script for the main that brings everything together, actually puts them all on one screen
+Marking hits and misses is intact
 
-index.html
+While much of the game is complete, we still need to add
 
-styles.css
+1. an efficient way of preventing board wrap-around
+2. game loss functions
+3. a streamlined user interface and user experience
+4. sinking ships
+5. setting the ship number
