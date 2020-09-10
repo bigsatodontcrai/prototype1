@@ -60,6 +60,10 @@ function markShip(square) {
 function rotate(element) {
 
 }
+/*
+for rotate, switch class names between vert and hori, or do the same toggle as Brian's code
+but also, switch the base from base to base-vert so that the container can stay the same relatively speaking
+*/
 
 function gameCheck() {
 

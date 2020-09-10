@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setup(ocean, markShip, pSquares);
         setupShips(base);
     });
+    
     rotateButton.addEventListener('click', rotate());
     startButton.addEventListener('click', () => {
         console.log('start');

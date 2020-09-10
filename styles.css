@@ -1,5 +1,5 @@
     body {
-        background-color: rgb(0, 183, 255);
+        background-color: rgb(51, 216, 194);
         display: grid;
         justify-items: center;
         color: white;
@@ -15,8 +15,8 @@
         margin: 1vmin 5vmin;
     }
     #view {
-        background-color: rgb(0, 183, 255);
-        height: 45vmin;
+        background-color: rgb(51, 216, 194);
+        height: 42vmin;
         width: 90vmin;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -59,6 +59,29 @@
         align-content: start;
     }
 
+    #whoseboard {
+        background-color: rgb(51, 216, 194);
+        height: 6vmin;
+        width: 90vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        justify-items: center;
+        color: white;
+        font: 5vmin sans-serif;
+    }
+
+    .label {
+        background-color: rgb(77, 1, 255);
+        height: 2.5vmin;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        color: black;
+        font: 2vmin sans-serif;
+    }
+
     
 
     .square {
@@ -90,11 +113,21 @@
     }
 
     #base {
-        background-color: rgb(50, 0, 200);
+        background-color: rgb(51, 216, 194);
         margin: 0.5vmin;
         height: 30vmin;
         width: 30vmin;
         
+        display: grid;
+        
+    }
+
+    #baseVert {
+        background-color: rgb(51, 216, 194);
+        margin: 0.5vmin;
+        height: 30vmin;
+        width: 30vmin;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         display: grid;
         
     }
@@ -200,7 +233,7 @@
         
         font-size: 1.5vmin sans-serif;
         background-color: hsl(115, 63%, 51%);
-        height: 5vmin;
+        height: 6vmin;
         width: 15vmin;
         padding: .5em 1em;
         outline: none;
@@ -209,6 +242,19 @@
         cursor: pointer;
         border-radius: .2em;
         color: #333;
+    }
+
+    .buttons {
+        background-color: rgb(51, 216, 194);
+        height: 6vmin;
+        width: 20vmin;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        justify-items: center;
+        color: white;
+        font: 5vmin sans-serif;
     }
 
     .btns {
@@ -225,11 +271,6 @@
         color: #333;
     }
 
-    .thingsToShowAfterStart {
-    font-size: 2.4rem;
-    align-items: center;
-    flex-direction: column;
-    }
 
     .displayedText {
         margin: 2rem;

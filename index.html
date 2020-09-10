@@ -9,7 +9,22 @@
         <div id="ocean">
         </div>
         </div>
-        <div id="base">
+    <div id="whoseboard">
+        <button id = "opponent" class = "btns">
+            Opponent
+        </button>
+        <button id="player" class = "btns">
+            Player
+        </button>
+    </div>
+    <button class="reset"> Click to reset. </button>
+    <div class="buttons" id="buttonsGone">
+    
+        <button id="start" class="btns">Click to Start</button>
+        <button id="rotate" class="btns">Rotate H/V</button>
+    </div>
+    
+    <div id="base">
         <div class="ship ship1-container" draggable="true">
             <div id="ship1-0">
                 <span id="circ"></span>
@@ -42,21 +57,14 @@
     </div>
     
     <p>
-        X to hit, O to miss.
+        Place on board, then start game.
     </p>
+    <h3 id="turn" class="displayedText">P1 Turn</h3>
+    <h3 id="placeholder" class="displayedText"></h3>
 
-    <button class="reset"> Click to reset. </button>
     
 </body>
 
-<div class="theOcean thingsToShowAfterStart">
-    <div class="buttons" id="buttonsGone">
-        <button id="start" class="btns">Click to Start</button>
-        <button id="rotate" class="btns">Rotate H/V</button>
-    </div>
-    <h3 id="turn" class="displayedText">P1 Turn</h3>
-    <h3 id="placeholder" class="displayedText"></h3>
-</div>
 
 
 <script src="Script.js"></script>

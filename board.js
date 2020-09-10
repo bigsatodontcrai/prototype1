@@ -1,6 +1,7 @@
 let shipById;
 let draggedShip;
 let draggedShipLength;
+
 const ships = document.querySelectorAll('.ship');
 
 ships.forEach(ship => ship.addEventListener('mousedown', (event) => {
@@ -59,7 +60,31 @@ function setupShips(parent) {
 
         }
     }
+    const ships = document.querySelectorAll('.ship');
+
+    ships.forEach(ship => ship.addEventListener('mousedown', (event) => {
+        shipById = event.target.id;
+        console.log(shipById);
+    }))
+
+    ships.forEach(ship => ship.addEventListener('dragstart', startDrag));
+
+    ships.forEach(ship => ship.setAttribute('draggable', 'true'));
+    
 }
+
+/*function ShipEvents() {
+    const ships = document.querySelectorAll('.ship');
+
+    ships.forEach(ship => ship.addEventListener('mousedown', (event) => {
+        shipById = event.target.id;
+        console.log(shipById);
+    }))
+
+    ships.forEach(ship => ship.addEventListener('dragstart', startDrag));
+
+    ships.forEach(ship => ship.setAttribute('draggable', 'true'));
+}*/
 
 function breakdown(parent) {
     while (parent.firstChild) {
@@ -101,12 +126,10 @@ function dragDrop() {
     if(!(isTaken)) {
         for (let i = 0; i < draggedShipLength; i++) {
             
-            if(!isTaken) {
-                pSquares[i + parseInt(this.dataset.id) - selectedShipIndex].classList.add('taken', shipClass);
-            }
-            else {
-                isTaken = true;
-            }
+            
+            pSquares[i + parseInt(this.dataset.id) - selectedShipIndex].classList.add('taken', shipClass);
+            
+            
             
         }
     }
