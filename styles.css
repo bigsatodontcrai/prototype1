@@ -1,6 +1,7 @@
     body {
         background-color: black;
-        display: flex;
+        display: grid;
+        justify-items: center;
         color: white;
     }
 
@@ -205,4 +206,20 @@
         font: 1.5vmin sans-serif;
     }
 
-    
+    .btns {
+    font-size: inherit;
+    background-color: hsl(115, 63%, 51%);
+    padding: .5em 1em;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: .2em;
+    color: #333;
+}
+
+.thingsToShowAfterStart {
+    font-size: 2.4rem;
+    align-items: center;
+    flex-direction: column;
+}

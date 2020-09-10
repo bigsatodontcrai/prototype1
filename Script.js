@@ -35,23 +35,23 @@ function destroy(element) {
     }
 }
 
-function markShip(elem) {
+function markShip(square) {
     return () => {
-        if (element.firstChild.className == 'hitit') {
+        if (square.classList.contains('taken')) {
 
-            let miss;
-            miss = document.createElement('span');
-            miss.className = 'missme';
-            element.removeChild(element.firstChild);
-            element.append(miss);
-
-        }
-        else {
             let hit;
             hit = document.createElement('span');
             hit.className = 'hitit';
-            element.removeChild(element.firstChild);
-            element.append(hit);
+            square.removeChild(square.firstChild);
+            square.append(hit);
+
+        }
+        else {
+            let miss;
+            miss = document.createElement('span');
+            miss.className = 'missme';
+            square.removeChild(square.firstChild);
+            square.append(miss);
 
         }
     }
