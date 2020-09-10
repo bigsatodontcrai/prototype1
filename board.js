@@ -38,6 +38,29 @@ function setup(parent, mark, Squares) {
     
 }
 
+function setupShips(parent) {
+    let container;
+    for (let i = 1; i < 6; i++) {
+
+        container = document.createElement('div');
+        container.className = 'ship';
+        container.classList.add('ship' + i + '-container');
+        container.setAttribute('draggable', 'true');
+        parent.append(container);
+        for (let j = 0; j < i; j++) {
+            let circ;
+            let piece;
+            piece = document.createElement('div');
+            piece.id = 'ship' + i + '-' + j;
+            container.append(piece);
+            circ = document.createElement('span');
+            circ.id = 'circ';
+            piece.append(circ);
+
+        }
+    }
+}
+
 function breakdown(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
@@ -57,27 +80,20 @@ function startDrag(ev) {
 }
 
 function dragDrop() {
-    
-    //console.log('dropping...');
-    //console.log(draggedShip.className);
     let shipNameWithLastId = draggedShip.lastElementChild.id;
-    //console.log(shipNameWithLastId);
+
     let shipClass;
     shipClass = shipNameWithLastId.slice(0, -2);
-    //console.log(shipClass);
+
     let lastShipIndex = parseInt(shipNameWithLastId.substr(-1));
-    //console.log(lastShipIndex);
-    //console.log(this);
-    //console.log(this.dataset.id);
+    
     let shipLastId = lastShipIndex + parseInt(this.dataset.id);
-    //console.log(shipLastId);
-    //console.log(shipNameWithLastId);
+   
     let isTaken = pSquares[parseInt(this.dataset.id)].classList.contains('taken');
-    //console.log(isTaken);
+ 
     let selectedShipIndex = parseInt(shipById.substr(-1));
     shipLastId = shipLastId - selectedShipIndex;
-    //console.log(shipLastId);
-    //console.log(pSquares[1].className);
+
 
     isTaken = checkTaken(this, selectedShipIndex);
     console.log(isTaken);
@@ -128,28 +144,7 @@ function checkTaken(elem, pointerIndex) {
     return complete;
 }
 
-function setupShips(parent) {
-    let container;
-    for (let i = 1; i < 6; i++) {
-        
-        container = document.createElement('div');
-        container.className = 'ship';
-        container.classList.add('ship' + i + '-container');
-        container.setAttribute('draggable', 'true');
-        parent.append(container);
-        for (let j = 0; j < i; j++) {
-            let circ;
-            let piece;
-            piece = document.createElement('div');
-            piece.id = 'ship' + i + '-' + j;
-            container.append(piece);
-            circ = document.createElement('span');
-            circ.id = 'circ';
-            piece.append(circ);
 
-        }
-    }
-}
 
 function dragover_handler(ev) {
     ev.preventDefault();
